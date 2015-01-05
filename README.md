@@ -1,11 +1,13 @@
 # Synopsis
 
-    :- use_module(library(pager)).
-    lots_of_lines :-
-        forall(between(1,40,N),writeln(N)).
+```prolog
+:- use_module(library(pager)).
+lots_of_lines :-
+    forall(between(1,40,N),writeln(N)).
 
-    main :-
-        with_pager(lots_of_lines).
+main :-
+    with_pager(lots_of_lines).
+```
 
 # Description
 
