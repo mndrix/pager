@@ -1,11 +1,17 @@
 # Synopsis
 
     :- use_module(library(pager)).
+    lots_of_lines :-
+        forall(between(1,40,N),writeln(N)).
+
     main :-
-        % give one motivating example
-        true.
+        with_pager(lots_of_lines).
 
 # Description
+
+Send the output of a predicate through the user's preferred pager.  It's helpful
+for scripts which generate output for a user's terminal.  You can think of it
+like calling a mythical `with_output_to(pager,Goal)`.
 
 # Installation
 
